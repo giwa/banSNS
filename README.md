@@ -3,7 +3,8 @@ banSNS
 
 disable to access to Facebook
 
-'''
+
+```
 ##
 # Host Database
 #
@@ -18,4 +19,4 @@ fe80::1%lo0	        localhost
 #127.0.0.1 facebook.com
 #127.0.0.1 login.facebook.com
 #127.0.0.1 www.facebook.com
-'''
+```
