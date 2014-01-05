@@ -3,6 +3,10 @@ banSNS
 
 disable to access to Facebook
 
+## USEAGE
+```
+sudo ./banSNS -m [allow/ban]
+```
 
 ```
 ##
@@ -20,3 +24,4 @@ fe80::1%lo0	        localhost
 #127.0.0.1 login.facebook.com
 #127.0.0.1 www.facebook.com
 ```
+
