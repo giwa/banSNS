@@ -14,6 +14,7 @@ hosts_file_path = '/private/etc/hosts'
 status = args.status
 facebooks = 'facebook.com www.facebook.com login.facebook.com'.split()
 twitters = 'twitter.com www.twitter.com'.split()
+snses = facebooks + twitters
 
 if not status in 'allow ban origin backup'.split():
 	sys.exit(0)
@@ -22,7 +23,7 @@ if not status == 'origin':
 	with open(hosts_file_path, 'r') as f:
 		if status == 'allow':
 			for line in f.readlines():
-				for sns in facebooks + twitters:
+                for sns in snses:
 					if line.find(sns) != -1:
 						break
 				else:
@@ -32,7 +33,7 @@ if not status == 'origin':
 			for line in f.readlines():
 				lines.append(line)
 
-			for sns in facebooks + twitters:
+            for sns in snses:
 				line = '127.0.0.1 ' + sns + "\n"
 				lines.append(line)
 
